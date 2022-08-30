@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true 
   has_many :articles 
+  has_many :comments
 
   devise :database_authenticatable, :registerable,
   :jwt_authenticatable,
